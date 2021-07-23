@@ -23,7 +23,12 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      
+
+      - name: Install Octopus CLI 🐙
+        uses: OctopusDeploy/install-octopus-cli-action@v1.1.6
+        with:
+          version: latest
+
       - name: Create Release in Octopus Deploy
         # You may pin to the exact commit or the version.
         # uses: OctopusDeploy/create-release-action@3b343d998cd06df4e23e3cba40a7979a1186aecd
