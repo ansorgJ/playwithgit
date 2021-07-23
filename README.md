@@ -2,3 +2,4 @@
 
 | a table |
 |---------|
+| content |
