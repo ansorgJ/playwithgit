@@ -34,6 +34,9 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+          echo 
+          echo ${{github.event}} ${{github.ref}} ${{github.event}} ${{github.event}}
+          echo 
       - name: Auto Tagger
         # You may pin to the exact commit or the version.
         # uses: VegetableGarden/beet@83090220f2d42895368597f11e5a8582bdc32939
