@@ -46,5 +46,6 @@ jobs:
           #release_number: # optional
           # The base URL hosting Octopus Deploy (i.e. "https://octopus.example.com/"). It is recommended to retrieve this value from an environment variable.
           server: https://keystonetest.octopus.app/ # optional
+          space: Jens
           # Perform a dry run; do not create or deploy a release.
           what_if: true # optional, default is false
