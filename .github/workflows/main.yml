@@ -48,4 +48,4 @@ jobs:
           server: https://keystonetest.octopus.app/ # optional
           space: Jens
           # Perform a dry run; do not create or deploy a release.
-          what_if: true # optional, default is false
+          what_if: false # optional, default is false
