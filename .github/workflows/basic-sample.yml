@@ -36,9 +36,7 @@ jobs:
           echo test, and deploy your project.
           echo 
           echo ${{github.event}} ${{github.ref}}
-          echo 
-          echo ${{toJSON(github)}}
-          echo 
+         
       - name: Auto Tagger
         # You may pin to the exact commit or the version.
         # uses: VegetableGarden/beet@83090220f2d42895368597f11e5a8582bdc32939
@@ -48,3 +46,28 @@ jobs:
           major-version: 0 # optional, default is 0
           # The tag minor version
           minor-version: 0 # optional, default is 0
+
+      - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJSON(github) }}
+        run: echo "$GITHUB_CONTEXT"
+      - name: Dump job context
+        env:
+          JOB_CONTEXT: ${{ toJSON(job) }}
+        run: echo "$JOB_CONTEXT"
+      - name: Dump steps context
+        env:
+          STEPS_CONTEXT: ${{ toJSON(steps) }}
+        run: echo "$STEPS_CONTEXT"
+      - name: Dump runner context
+        env:
+          RUNNER_CONTEXT: ${{ toJSON(runner) }}
+        run: echo "$RUNNER_CONTEXT"
+      - name: Dump strategy context
+        env:
+          STRATEGY_CONTEXT: ${{ toJSON(strategy) }}
+        run: echo "$STRATEGY_CONTEXT"
+      - name: Dump matrix context
+        env:
+          MATRIX_CONTEXT: ${{ toJSON(matrix) }}
+        run: echo "$MATRIX_CONTEXT"
