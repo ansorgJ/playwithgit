@@ -1,1 +1,4 @@
 # playwithgit
+
+| a table |
+|---------|
